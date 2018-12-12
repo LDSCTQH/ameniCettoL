@@ -41,12 +41,15 @@
             this.lb_startday = new System.Windows.Forms.Label();
             this.lb_film = new System.Windows.Forms.Label();
             this.lb_cinema = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cb_cinema = new System.Windows.Forms.ComboBox();
+            this.cb_film = new System.Windows.Forms.ComboBox();
             this.cinemaDataSet = new LotteCinema.cinemaDataSet();
             this.cinemaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_dateFrom = new System.Windows.Forms.TextBox();
+            this.tb_dateTo = new System.Windows.Forms.TextBox();
+            this.dtpk_dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpk_dateTo = new System.Windows.Forms.DateTimePicker();
+            this.btn_statistic = new System.Windows.Forms.Button();
             this.tapControl1.SuspendLayout();
             this.tp_film.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).BeginInit();
@@ -81,7 +84,6 @@
             this.tp_film.TabIndex = 0;
             this.tp_film.Text = "Phim";
             this.tp_film.UseVisualStyleBackColor = true;
-            this.tp_film.Click += new System.EventHandler(this.tp_film_Click);
             // 
             // dgv_film
             // 
@@ -101,7 +103,6 @@
             this.tp_showtimes.TabIndex = 1;
             this.tp_showtimes.Text = "Lịch chiếu";
             this.tp_showtimes.UseVisualStyleBackColor = true;
-            this.tp_showtimes.Click += new System.EventHandler(this.tp_showtimes_Click);
             // 
             // dgv_showtime
             // 
@@ -132,14 +133,17 @@
             // 
             // gb_statistic
             // 
+            this.gb_statistic.Controls.Add(this.btn_statistic);
+            this.gb_statistic.Controls.Add(this.dtpk_dateTo);
+            this.gb_statistic.Controls.Add(this.dtpk_dateFrom);
+            this.gb_statistic.Controls.Add(this.tb_dateTo);
+            this.gb_statistic.Controls.Add(this.tb_dateFrom);
             this.gb_statistic.Controls.Add(this.lb_endday);
             this.gb_statistic.Controls.Add(this.lb_startday);
             this.gb_statistic.Controls.Add(this.lb_film);
             this.gb_statistic.Controls.Add(this.lb_cinema);
-            this.gb_statistic.Controls.Add(this.comboBox4);
-            this.gb_statistic.Controls.Add(this.comboBox3);
-            this.gb_statistic.Controls.Add(this.comboBox1);
-            this.gb_statistic.Controls.Add(this.comboBox2);
+            this.gb_statistic.Controls.Add(this.cb_cinema);
+            this.gb_statistic.Controls.Add(this.cb_film);
             this.gb_statistic.Location = new System.Drawing.Point(15, 65);
             this.gb_statistic.Name = "gb_statistic";
             this.gb_statistic.Size = new System.Drawing.Size(312, 282);
@@ -150,7 +154,7 @@
             // lb_endday
             // 
             this.lb_endday.AutoSize = true;
-            this.lb_endday.Location = new System.Drawing.Point(17, 200);
+            this.lb_endday.Location = new System.Drawing.Point(40, 201);
             this.lb_endday.Name = "lb_endday";
             this.lb_endday.Size = new System.Drawing.Size(74, 13);
             this.lb_endday.TabIndex = 7;
@@ -159,7 +163,7 @@
             // lb_startday
             // 
             this.lb_startday.AutoSize = true;
-            this.lb_startday.Location = new System.Drawing.Point(17, 150);
+            this.lb_startday.Location = new System.Drawing.Point(40, 151);
             this.lb_startday.Name = "lb_startday";
             this.lb_startday.Size = new System.Drawing.Size(72, 13);
             this.lb_startday.TabIndex = 6;
@@ -168,7 +172,7 @@
             // lb_film
             // 
             this.lb_film.AutoSize = true;
-            this.lb_film.Location = new System.Drawing.Point(17, 100);
+            this.lb_film.Location = new System.Drawing.Point(40, 101);
             this.lb_film.Name = "lb_film";
             this.lb_film.Size = new System.Drawing.Size(30, 13);
             this.lb_film.TabIndex = 5;
@@ -177,43 +181,27 @@
             // lb_cinema
             // 
             this.lb_cinema.AutoSize = true;
-            this.lb_cinema.Location = new System.Drawing.Point(17, 50);
+            this.lb_cinema.Location = new System.Drawing.Point(40, 51);
             this.lb_cinema.Name = "lb_cinema";
             this.lb_cinema.Size = new System.Drawing.Size(27, 13);
             this.lb_cinema.TabIndex = 4;
             this.lb_cinema.Text = "Rạp";
             // 
-            // comboBox4
+            // cb_cinema
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(122, 197);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 3;
+            this.cb_cinema.FormattingEnabled = true;
+            this.cb_cinema.Location = new System.Drawing.Point(145, 48);
+            this.cb_cinema.Name = "cb_cinema";
+            this.cb_cinema.Size = new System.Drawing.Size(121, 21);
+            this.cb_cinema.TabIndex = 0;
             // 
-            // comboBox3
+            // cb_film
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(122, 147);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(122, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(122, 97);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cb_film.FormattingEnabled = true;
+            this.cb_film.Location = new System.Drawing.Point(145, 98);
+            this.cb_film.Name = "cb_film";
+            this.cb_film.Size = new System.Drawing.Size(121, 21);
+            this.cb_film.TabIndex = 1;
             // 
             // cinemaDataSet
             // 
@@ -224,6 +212,48 @@
             // 
             this.cinemaDataSetBindingSource.DataSource = this.cinemaDataSet;
             this.cinemaDataSetBindingSource.Position = 0;
+            // 
+            // tb_dateFrom
+            // 
+            this.tb_dateFrom.Location = new System.Drawing.Point(145, 148);
+            this.tb_dateFrom.Name = "tb_dateFrom";
+            this.tb_dateFrom.Size = new System.Drawing.Size(100, 20);
+            this.tb_dateFrom.TabIndex = 8;
+            // 
+            // tb_dateTo
+            // 
+            this.tb_dateTo.Location = new System.Drawing.Point(145, 198);
+            this.tb_dateTo.Name = "tb_dateTo";
+            this.tb_dateTo.Size = new System.Drawing.Size(100, 20);
+            this.tb_dateTo.TabIndex = 9;
+            // 
+            // dtpk_dateFrom
+            // 
+            this.dtpk_dateFrom.Location = new System.Drawing.Point(247, 148);
+            this.dtpk_dateFrom.Name = "dtpk_dateFrom";
+            this.dtpk_dateFrom.Size = new System.Drawing.Size(19, 20);
+            this.dtpk_dateFrom.TabIndex = 10;
+            this.dtpk_dateFrom.Value = new System.DateTime(2018, 12, 13, 3, 58, 34, 0);
+            this.dtpk_dateFrom.ValueChanged += new System.EventHandler(this.dtpk_dateFrom_ValueChanged);
+            // 
+            // dtpk_dateTo
+            // 
+            this.dtpk_dateTo.Location = new System.Drawing.Point(247, 198);
+            this.dtpk_dateTo.Name = "dtpk_dateTo";
+            this.dtpk_dateTo.Size = new System.Drawing.Size(19, 20);
+            this.dtpk_dateTo.TabIndex = 11;
+            this.dtpk_dateTo.Value = new System.DateTime(2018, 12, 13, 3, 58, 34, 0);
+            this.dtpk_dateTo.ValueChanged += new System.EventHandler(this.dtpk_dateTo_ValueChanged);
+            // 
+            // btn_statistic
+            // 
+            this.btn_statistic.Location = new System.Drawing.Point(111, 237);
+            this.btn_statistic.Name = "btn_statistic";
+            this.btn_statistic.Size = new System.Drawing.Size(96, 23);
+            this.btn_statistic.TabIndex = 12;
+            this.btn_statistic.Text = "Thống kê";
+            this.btn_statistic.UseVisualStyleBackColor = true;
+            this.btn_statistic.Click += new System.EventHandler(this.btn_statistic_Click);
             // 
             // fManager
             // 
@@ -265,10 +295,13 @@
         private System.Windows.Forms.Label lb_startday;
         private System.Windows.Forms.Label lb_film;
         private System.Windows.Forms.Label lb_cinema;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cb_cinema;
+        private System.Windows.Forms.ComboBox cb_film;
         private System.Windows.Forms.DataGridView dgv_statistic;
+        private System.Windows.Forms.DateTimePicker dtpk_dateTo;
+        private System.Windows.Forms.DateTimePicker dtpk_dateFrom;
+        private System.Windows.Forms.TextBox tb_dateTo;
+        private System.Windows.Forms.TextBox tb_dateFrom;
+        private System.Windows.Forms.Button btn_statistic;
     }
 }

@@ -33,7 +33,7 @@ namespace LotteCinema
                 else if (rb_seller.Checked)
                     position = "NV";
 
-                using (SqlConnection conn = new SqlConnection(Connection.connectionString()))
+                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
                 using (SqlCommand cmd = new SqlCommand("sp_DangNhap", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;

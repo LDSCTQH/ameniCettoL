@@ -20,7 +20,7 @@ namespace LotteCinema
 
         private void loadFilmList()
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString()))
+            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
             using (SqlCommand cmd = new SqlCommand("sp_LietKeSuatChieu", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -36,7 +36,7 @@ namespace LotteCinema
 
         private void loadShowtimes()
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connectionString()))
+            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
             using (SqlCommand cmd = new SqlCommand("sp_LietKeSuatChieu", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;

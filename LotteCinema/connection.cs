@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LotteCinema
 {
-    class Connection
+    class SQLConnection
     {
         public static string connectionString()
         {
