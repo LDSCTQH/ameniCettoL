@@ -18,37 +18,22 @@ namespace LotteCinema
             InitializeComponent();
         }
 
-        private void loadFilmList()
+        
+
+        private void loadTabShowtimes(SqlConnection conn)
         {
-            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
             using (SqlCommand cmd = new SqlCommand("sp_LietKeSuatChieu", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                conn.Open();
-                cmd.ExecuteScalar();
+                cmd.Parameters.Add("@soluong", SqlDbType.Int);
+                cmd.Parameters["@soluong"].Direction = ParameterDirection.Output;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dgv_film.DataSource = dt;
-                conn.Close();
+                dgv_showtimes.DataSource = dt;
             }
         }
 
-        private void loadShowtimes()
-        {
-            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
-            using (SqlCommand cmd = new SqlCommand("sp_LietKeSuatChieu", conn))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                conn.Open();
-                cmd.ExecuteScalar();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgv_film.DataSource = dt;
-                conn.Close();
-            }
-        }
         private void btn_add_Click(object sender, EventArgs e)
         {
             fAddMember form = new fAddMember();
@@ -57,19 +42,14 @@ namespace LotteCinema
             this.Show();
         }
 
-        private void tp_filmlist_Click(object sender, EventArgs e)
-        {
-            loadFilmList();
-        }
-
-        private void tp_showtimes_Click(object sender, EventArgs e)
-        {
-            loadShowtimes();
-        }
-
         private void fTicketClerk_Load(object sender, EventArgs e)
         {
-            loadFilmList();
+            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+            {
+                conn.Open();
+                loadTabShowtimes(conn);
+                conn.Close();
+            }
         }
     }
 }

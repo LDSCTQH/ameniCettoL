@@ -24,3 +24,17 @@ E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\LDSCTQH\LotteCinema\obj\Debu
 E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\LDSCTQH\LotteCinema\obj\Debug\LotteCinema.csproj.CoreCompileInputs.cache
 E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\LDSCTQH\LotteCinema\obj\Debug\LotteCinema.exe
 E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\LDSCTQH\LotteCinema\obj\Debug\LotteCinema.pdb
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\bin\Debug\LotteCinema.exe.config
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\bin\Debug\LotteCinema.exe
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\bin\Debug\LotteCinema.pdb
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.csprojAssemblyReference.cache
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fAddMember.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fLogin.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fManager.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.Properties.Resources.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fTicketClerk.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.csproj.GenerateResource.cache
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.csproj.CoreCompileInputs.cache
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.exe
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.pdb
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fSeat.resources

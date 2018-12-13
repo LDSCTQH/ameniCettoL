@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tp_filmlist = new System.Windows.Forms.TabPage();
-            this.dgv_film = new System.Windows.Forms.DataGridView();
             this.tp_showtimes = new System.Windows.Forms.TabPage();
             this.dgv_showtimes = new System.Windows.Forms.DataGridView();
-            this.tp_ticketing = new System.Windows.Forms.TabPage();
             this.tp_booking = new System.Windows.Forms.TabPage();
             this.tp_member = new System.Windows.Forms.TabPage();
             this.btn_add = new System.Windows.Forms.Button();
@@ -44,8 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
-            this.tp_filmlist.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).BeginInit();
             this.tp_showtimes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showtimes)).BeginInit();
             this.tp_member.SuspendLayout();
@@ -54,9 +49,7 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tp_filmlist);
             this.tabControl1.Controls.Add(this.tp_showtimes);
-            this.tabControl1.Controls.Add(this.tp_ticketing);
             this.tabControl1.Controls.Add(this.tp_booking);
             this.tabControl1.Controls.Add(this.tp_member);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
@@ -65,25 +58,6 @@
             this.tabControl1.Size = new System.Drawing.Size(775, 425);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
-            // 
-            // tp_filmlist
-            // 
-            this.tp_filmlist.Controls.Add(this.dgv_film);
-            this.tp_filmlist.Location = new System.Drawing.Point(4, 22);
-            this.tp_filmlist.Name = "tp_filmlist";
-            this.tp_filmlist.Size = new System.Drawing.Size(767, 399);
-            this.tp_filmlist.TabIndex = 4;
-            this.tp_filmlist.Text = "Danh sách phim";
-            this.tp_filmlist.UseVisualStyleBackColor = true;
-            this.tp_filmlist.Click += new System.EventHandler(this.tp_filmlist_Click);
-            // 
-            // dgv_film
-            // 
-            this.dgv_film.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_film.Location = new System.Drawing.Point(36, 30);
-            this.dgv_film.Name = "dgv_film";
-            this.dgv_film.Size = new System.Drawing.Size(693, 350);
-            this.dgv_film.TabIndex = 0;
             // 
             // tp_showtimes
             // 
@@ -95,25 +69,14 @@
             this.tp_showtimes.TabIndex = 0;
             this.tp_showtimes.Text = "Lịch chiếu";
             this.tp_showtimes.UseVisualStyleBackColor = true;
-            this.tp_showtimes.Click += new System.EventHandler(this.tp_showtimes_Click);
             // 
             // dgv_showtimes
             // 
             this.dgv_showtimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_showtimes.Location = new System.Drawing.Point(27, 88);
+            this.dgv_showtimes.Location = new System.Drawing.Point(27, 30);
             this.dgv_showtimes.Name = "dgv_showtimes";
-            this.dgv_showtimes.Size = new System.Drawing.Size(708, 289);
+            this.dgv_showtimes.Size = new System.Drawing.Size(708, 347);
             this.dgv_showtimes.TabIndex = 0;
-            // 
-            // tp_ticketing
-            // 
-            this.tp_ticketing.Location = new System.Drawing.Point(4, 22);
-            this.tp_ticketing.Name = "tp_ticketing";
-            this.tp_ticketing.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_ticketing.Size = new System.Drawing.Size(767, 399);
-            this.tp_ticketing.TabIndex = 1;
-            this.tp_ticketing.Text = "Bán vé";
-            this.tp_ticketing.UseVisualStyleBackColor = true;
             // 
             // tp_booking
             // 
@@ -121,7 +84,7 @@
             this.tp_booking.Name = "tp_booking";
             this.tp_booking.Size = new System.Drawing.Size(767, 399);
             this.tp_booking.TabIndex = 2;
-            this.tp_booking.Text = "Đặt/hủy chổ";
+            this.tp_booking.Text = "Đặt vé";
             this.tp_booking.UseVisualStyleBackColor = true;
             // 
             // tp_member
@@ -196,9 +159,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 163);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 137);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(712, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(712, 175);
             this.dataGridView1.TabIndex = 0;
             // 
             // fTicketClerk
@@ -212,8 +175,6 @@
             this.Text = "Bán vé";
             this.Load += new System.EventHandler(this.fTicketClerk_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tp_filmlist.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).EndInit();
             this.tp_showtimes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showtimes)).EndInit();
             this.tp_member.ResumeLayout(false);
@@ -227,10 +188,8 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tp_showtimes;
-        private System.Windows.Forms.TabPage tp_ticketing;
         private System.Windows.Forms.TabPage tp_booking;
         private System.Windows.Forms.TabPage tp_member;
-        private System.Windows.Forms.TabPage tp_filmlist;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.TextBox tb_identitycard;
@@ -238,7 +197,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dgv_film;
         private System.Windows.Forms.DataGridView dgv_showtimes;
     }
 }

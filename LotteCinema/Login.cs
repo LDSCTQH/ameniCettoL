@@ -43,11 +43,9 @@ namespace LotteCinema
 
                     cmd.Parameters.Add("@cmnd", SqlDbType.NVarChar);
                     cmd.Parameters.Add("@matKhau", SqlDbType.NVarChar);
-                    cmd.Parameters.Add("@chucvu", SqlDbType.Char);
                     cmd.Parameters.Add("@idnhanvien", SqlDbType.Int);
                     cmd.Parameters["@cmnd"].Value = tb_username.Text;
                     cmd.Parameters["@matKhau"].Value = tb_password.Text;
-                    cmd.Parameters["@chucvu"].Value = position;
                     cmd.Parameters["@idnhanvien"].Direction = ParameterDirection.Output;
 
                     conn.Open();

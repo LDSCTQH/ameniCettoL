@@ -48,6 +48,12 @@
             this.cb_film = new System.Windows.Forms.ComboBox();
             this.cinemaDataSet = new LotteCinema.cinemaDataSet();
             this.cinemaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_deleteFilm = new System.Windows.Forms.Button();
+            this.btn_updateFilm = new System.Windows.Forms.Button();
+            this.btn_insertFilm = new System.Windows.Forms.Button();
+            this.btn_insertShowtime = new System.Windows.Forms.Button();
+            this.btn_updateShowtime = new System.Windows.Forms.Button();
+            this.btn_deleteShowtime = new System.Windows.Forms.Button();
             this.tapControl1.SuspendLayout();
             this.tp_film.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).BeginInit();
@@ -74,6 +80,9 @@
             // 
             // tp_film
             // 
+            this.tp_film.Controls.Add(this.btn_insertFilm);
+            this.tp_film.Controls.Add(this.btn_updateFilm);
+            this.tp_film.Controls.Add(this.btn_deleteFilm);
             this.tp_film.Controls.Add(this.dgv_film);
             this.tp_film.Location = new System.Drawing.Point(4, 22);
             this.tp_film.Name = "tp_film";
@@ -86,13 +95,16 @@
             // dgv_film
             // 
             this.dgv_film.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_film.Location = new System.Drawing.Point(29, 48);
+            this.dgv_film.Location = new System.Drawing.Point(29, 23);
             this.dgv_film.Name = "dgv_film";
-            this.dgv_film.Size = new System.Drawing.Size(704, 320);
+            this.dgv_film.Size = new System.Drawing.Size(704, 293);
             this.dgv_film.TabIndex = 0;
             // 
             // tp_showtimes
             // 
+            this.tp_showtimes.Controls.Add(this.btn_insertShowtime);
+            this.tp_showtimes.Controls.Add(this.btn_updateShowtime);
+            this.tp_showtimes.Controls.Add(this.btn_deleteShowtime);
             this.tp_showtimes.Controls.Add(this.dgv_showtime);
             this.tp_showtimes.Location = new System.Drawing.Point(4, 22);
             this.tp_showtimes.Name = "tp_showtimes";
@@ -107,7 +119,7 @@
             this.dgv_showtime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_showtime.Location = new System.Drawing.Point(32, 38);
             this.dgv_showtime.Name = "dgv_showtime";
-            this.dgv_showtime.Size = new System.Drawing.Size(704, 338);
+            this.dgv_showtime.Size = new System.Drawing.Size(704, 280);
             this.dgv_showtime.TabIndex = 0;
             // 
             // tp_statistic
@@ -234,6 +246,60 @@
             this.cinemaDataSetBindingSource.DataSource = this.cinemaDataSet;
             this.cinemaDataSetBindingSource.Position = 0;
             // 
+            // btn_deleteFilm
+            // 
+            this.btn_deleteFilm.Location = new System.Drawing.Point(190, 339);
+            this.btn_deleteFilm.Name = "btn_deleteFilm";
+            this.btn_deleteFilm.Size = new System.Drawing.Size(75, 23);
+            this.btn_deleteFilm.TabIndex = 1;
+            this.btn_deleteFilm.Text = "Delete";
+            this.btn_deleteFilm.UseVisualStyleBackColor = true;
+            // 
+            // btn_updateFilm
+            // 
+            this.btn_updateFilm.Location = new System.Drawing.Point(338, 339);
+            this.btn_updateFilm.Name = "btn_updateFilm";
+            this.btn_updateFilm.Size = new System.Drawing.Size(75, 23);
+            this.btn_updateFilm.TabIndex = 2;
+            this.btn_updateFilm.Text = "Update";
+            this.btn_updateFilm.UseVisualStyleBackColor = true;
+            // 
+            // btn_insertFilm
+            // 
+            this.btn_insertFilm.Location = new System.Drawing.Point(487, 339);
+            this.btn_insertFilm.Name = "btn_insertFilm";
+            this.btn_insertFilm.Size = new System.Drawing.Size(75, 23);
+            this.btn_insertFilm.TabIndex = 3;
+            this.btn_insertFilm.Text = "Insert";
+            this.btn_insertFilm.UseVisualStyleBackColor = true;
+            // 
+            // btn_insertShowtime
+            // 
+            this.btn_insertShowtime.Location = new System.Drawing.Point(491, 348);
+            this.btn_insertShowtime.Name = "btn_insertShowtime";
+            this.btn_insertShowtime.Size = new System.Drawing.Size(75, 23);
+            this.btn_insertShowtime.TabIndex = 6;
+            this.btn_insertShowtime.Text = "Insert";
+            this.btn_insertShowtime.UseVisualStyleBackColor = true;
+            // 
+            // btn_updateShowtime
+            // 
+            this.btn_updateShowtime.Location = new System.Drawing.Point(342, 348);
+            this.btn_updateShowtime.Name = "btn_updateShowtime";
+            this.btn_updateShowtime.Size = new System.Drawing.Size(75, 23);
+            this.btn_updateShowtime.TabIndex = 5;
+            this.btn_updateShowtime.Text = "Update";
+            this.btn_updateShowtime.UseVisualStyleBackColor = true;
+            // 
+            // btn_deleteShowtime
+            // 
+            this.btn_deleteShowtime.Location = new System.Drawing.Point(194, 348);
+            this.btn_deleteShowtime.Name = "btn_deleteShowtime";
+            this.btn_deleteShowtime.Size = new System.Drawing.Size(75, 23);
+            this.btn_deleteShowtime.TabIndex = 4;
+            this.btn_deleteShowtime.Text = "Delete";
+            this.btn_deleteShowtime.UseVisualStyleBackColor = true;
+            // 
             // fManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,5 +346,11 @@
         private System.Windows.Forms.TextBox tb_dateTo;
         private System.Windows.Forms.TextBox tb_dateFrom;
         private System.Windows.Forms.Button btn_statistic;
+        private System.Windows.Forms.Button btn_insertFilm;
+        private System.Windows.Forms.Button btn_updateFilm;
+        private System.Windows.Forms.Button btn_deleteFilm;
+        private System.Windows.Forms.Button btn_insertShowtime;
+        private System.Windows.Forms.Button btn_updateShowtime;
+        private System.Windows.Forms.Button btn_deleteShowtime;
     }
 }

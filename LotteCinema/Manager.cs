@@ -37,6 +37,8 @@ namespace LotteCinema
             using (SqlCommand cmd = new SqlCommand("sp_LietKeSuatChieu", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@soluong", SqlDbType.Int);
+                cmd.Parameters["@soluong"].Direction = ParameterDirection.Output;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -132,5 +134,6 @@ namespace LotteCinema
         {
             tb_dateTo.Text = Date(dtpk_dateTo.Value);
         }
+
     }
 }
