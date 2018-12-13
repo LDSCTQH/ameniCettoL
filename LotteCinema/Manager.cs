@@ -13,9 +13,11 @@ namespace LotteCinema
 {
     public partial class fManager : Form
     {
+        int employeeID;
         public fManager()
         {
             InitializeComponent();
+            employeeID = fLogin.employeeID;
         }
 
         private void loadTabFilm(SqlConnection conn)
@@ -49,17 +51,6 @@ namespace LotteCinema
 
         private void loadTabStatistic(SqlConnection conn)
         {
-            using (SqlCommand cmd = new SqlCommand("sp_LietKeRap", conn))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                cb_cinema.DataSource = dt;
-                cb_cinema.ValueMember = "idrap";
-                cb_cinema.DisplayMember = "tenrap";
-            }
-
             using (SqlCommand cmd = new SqlCommand("sp_LietKePhim", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -75,6 +66,25 @@ namespace LotteCinema
             tb_dateFrom.Text = Date(dtpk_dateFrom.Value);
             dtpk_dateTo.Value = DateTime.Today.AddDays(1);
             tb_dateTo.Text = Date(dtpk_dateTo.Value);
+        }
+
+        private int getCinemaID()
+        {
+            int cinemaID = 0;
+            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+            using (SqlCommand cmd = new SqlCommand("sp_LamViecORap", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@nhanvien", SqlDbType.Int);
+                cmd.Parameters.Add("@rap", SqlDbType.Int);
+                cmd.Parameters["@nhanvien"].Value = employeeID;
+                cmd.Parameters["@rap"].Direction = ParameterDirection.Output;
+                conn.Open();
+                cmd.ExecuteScalar();
+                cinemaID = (int)cmd.Parameters["@rap"].Value;
+                conn.Close();
+            }
+            return cinemaID;
         }
 
         private void fManager_Load(object sender, EventArgs e)
@@ -95,22 +105,20 @@ namespace LotteCinema
             using (SqlCommand cmd = new SqlCommand("sp_ThongKe", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-
+                //MessageBox.Show(cb_film.SelectedValue.ToString(), "id film");
                 cmd.Parameters.Add("@rap", SqlDbType.Int);
                 cmd.Parameters.Add("@phim", SqlDbType.Int);
                 cmd.Parameters.Add("@ngayBD", SqlDbType.Date);
                 cmd.Parameters.Add("@ngayKT", SqlDbType.Date);
-                cmd.Parameters["@rap"].Value = int.Parse(cb_cinema.SelectedValue.ToString());
+                cmd.Parameters["@rap"].Value = getCinemaID();
                 cmd.Parameters["@phim"].Value = int.Parse(cb_film.SelectedValue.ToString());
-                cmd.Parameters["@ngayBD"].Value = dtpk_dateFrom.Value;
-                cmd.Parameters["@ngayKT"].Value = dtpk_dateTo.Value;
-
+                cmd.Parameters["@ngayBD"].Value = dtpk_dateFrom.Value.Date;
+                cmd.Parameters["@ngayKT"].Value = dtpk_dateTo.Value.Date;
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                cb_film.DataSource = dt;
-
+                dgv_statistic.DataSource = dt;
                 conn.Close();
             }
         }

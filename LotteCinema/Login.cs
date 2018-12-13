@@ -14,6 +14,9 @@ namespace LotteCinema
 {
     public partial class fLogin : Form
     {
+
+        public static int employeeID = 0;
+
         public fLogin()
         {
             InitializeComponent();
@@ -41,18 +44,18 @@ namespace LotteCinema
                     cmd.Parameters.Add("@cmnd", SqlDbType.NVarChar);
                     cmd.Parameters.Add("@matKhau", SqlDbType.NVarChar);
                     cmd.Parameters.Add("@chucvu", SqlDbType.Char);
-                    cmd.Parameters.Add("@isTrue", SqlDbType.Int);
+                    cmd.Parameters.Add("@idnhanvien", SqlDbType.Int);
                     cmd.Parameters["@cmnd"].Value = tb_username.Text;
                     cmd.Parameters["@matKhau"].Value = tb_password.Text;
                     cmd.Parameters["@chucvu"].Value = position;
-                    cmd.Parameters["@isTrue"].Direction = ParameterDirection.Output;
+                    cmd.Parameters["@idnhanvien"].Direction = ParameterDirection.Output;
 
                     conn.Open();
                     cmd.ExecuteScalar();
                     //cmd.ExecuteNonQuery();
 
-                    int logged = (int)cmd.Parameters["@isTrue"].Value;
-                    if (logged == 1)
+                    employeeID = (int)cmd.Parameters["@idnhanvien"].Value;
+                    if (employeeID > 0)
                     {
                         if (position == "QL")
                         {

@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tp_filmlist = new System.Windows.Forms.TabPage();
+            this.dgv_film = new System.Windows.Forms.DataGridView();
             this.tp_showtimes = new System.Windows.Forms.TabPage();
+            this.dgv_showtimes = new System.Windows.Forms.DataGridView();
             this.tp_ticketing = new System.Windows.Forms.TabPage();
             this.tp_booking = new System.Windows.Forms.TabPage();
             this.tp_member = new System.Windows.Forms.TabPage();
-            this.tp_filmlist = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_identitycard = new System.Windows.Forms.TextBox();
-            this.tb_name = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
-            this.dgv_film = new System.Windows.Forms.DataGridView();
-            this.dgv_showtimes = new System.Windows.Forms.DataGridView();
+            this.tb_name = new System.Windows.Forms.TextBox();
+            this.tb_identitycard = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
-            this.tp_showtimes.SuspendLayout();
-            this.tp_member.SuspendLayout();
             this.tp_filmlist.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).BeginInit();
+            this.tp_showtimes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showtimes)).BeginInit();
+            this.tp_member.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -66,6 +66,25 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
+            // tp_filmlist
+            // 
+            this.tp_filmlist.Controls.Add(this.dgv_film);
+            this.tp_filmlist.Location = new System.Drawing.Point(4, 22);
+            this.tp_filmlist.Name = "tp_filmlist";
+            this.tp_filmlist.Size = new System.Drawing.Size(767, 399);
+            this.tp_filmlist.TabIndex = 4;
+            this.tp_filmlist.Text = "Danh sách phim";
+            this.tp_filmlist.UseVisualStyleBackColor = true;
+            this.tp_filmlist.Click += new System.EventHandler(this.tp_filmlist_Click);
+            // 
+            // dgv_film
+            // 
+            this.dgv_film.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_film.Location = new System.Drawing.Point(36, 30);
+            this.dgv_film.Name = "dgv_film";
+            this.dgv_film.Size = new System.Drawing.Size(693, 350);
+            this.dgv_film.TabIndex = 0;
+            // 
             // tp_showtimes
             // 
             this.tp_showtimes.Controls.Add(this.dgv_showtimes);
@@ -77,6 +96,14 @@
             this.tp_showtimes.Text = "Lịch chiếu";
             this.tp_showtimes.UseVisualStyleBackColor = true;
             this.tp_showtimes.Click += new System.EventHandler(this.tp_showtimes_Click);
+            // 
+            // dgv_showtimes
+            // 
+            this.dgv_showtimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_showtimes.Location = new System.Drawing.Point(27, 88);
+            this.dgv_showtimes.Name = "dgv_showtimes";
+            this.dgv_showtimes.Size = new System.Drawing.Size(708, 289);
+            this.dgv_showtimes.TabIndex = 0;
             // 
             // tp_ticketing
             // 
@@ -113,42 +140,29 @@
             this.tp_member.Text = "Thành viên";
             this.tp_member.UseVisualStyleBackColor = true;
             // 
-            // tp_filmlist
+            // btn_add
             // 
-            this.tp_filmlist.Controls.Add(this.dgv_film);
-            this.tp_filmlist.Location = new System.Drawing.Point(4, 22);
-            this.tp_filmlist.Name = "tp_filmlist";
-            this.tp_filmlist.Size = new System.Drawing.Size(767, 399);
-            this.tp_filmlist.TabIndex = 4;
-            this.tp_filmlist.Text = "Danh sách phim";
-            this.tp_filmlist.UseVisualStyleBackColor = true;
-            this.tp_filmlist.Click += new System.EventHandler(this.tp_filmlist_Click);
+            this.btn_add.Location = new System.Drawing.Point(298, 357);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(146, 23);
+            this.btn_add.TabIndex = 7;
+            this.btn_add.Text = "Thêm thành viên";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // dataGridView1
+            // tb_name
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(712, 222);
-            this.dataGridView1.TabIndex = 0;
+            this.tb_name.Location = new System.Drawing.Point(493, 52);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(244, 20);
+            this.tb_name.TabIndex = 6;
             // 
-            // label2
+            // tb_identitycard
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CMND";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(392, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tên thành viên";
+            this.tb_identitycard.Location = new System.Drawing.Point(77, 52);
+            this.tb_identitycard.Name = "tb_identitycard";
+            this.tb_identitycard.Size = new System.Drawing.Size(244, 20);
+            this.tb_identitycard.TabIndex = 5;
             // 
             // label1
             // 
@@ -161,45 +175,31 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Tìm kiếm thành viên";
             // 
-            // tb_identitycard
+            // label3
             // 
-            this.tb_identitycard.Location = new System.Drawing.Point(77, 52);
-            this.tb_identitycard.Name = "tb_identitycard";
-            this.tb_identitycard.Size = new System.Drawing.Size(244, 20);
-            this.tb_identitycard.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(392, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tên thành viên";
             // 
-            // tb_name
+            // label2
             // 
-            this.tb_name.Location = new System.Drawing.Point(493, 52);
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(244, 20);
-            this.tb_name.TabIndex = 6;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "CMND";
             // 
-            // btn_add
+            // dataGridView1
             // 
-            this.btn_add.Location = new System.Drawing.Point(298, 357);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(146, 23);
-            this.btn_add.TabIndex = 7;
-            this.btn_add.Text = "Thêm thành viên";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // dgv_film
-            // 
-            this.dgv_film.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_film.Location = new System.Drawing.Point(36, 30);
-            this.dgv_film.Name = "dgv_film";
-            this.dgv_film.Size = new System.Drawing.Size(693, 350);
-            this.dgv_film.TabIndex = 0;
-            // 
-            // dgv_showtimes
-            // 
-            this.dgv_showtimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_showtimes.Location = new System.Drawing.Point(27, 88);
-            this.dgv_showtimes.Name = "dgv_showtimes";
-            this.dgv_showtimes.Size = new System.Drawing.Size(708, 289);
-            this.dgv_showtimes.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 163);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(712, 149);
+            this.dataGridView1.TabIndex = 0;
             // 
             // fTicketClerk
             // 
@@ -212,13 +212,13 @@
             this.Text = "Bán vé";
             this.Load += new System.EventHandler(this.fTicketClerk_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tp_filmlist.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).EndInit();
             this.tp_showtimes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_showtimes)).EndInit();
             this.tp_member.ResumeLayout(false);
             this.tp_member.PerformLayout();
-            this.tp_filmlist.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_showtimes)).EndInit();
             this.ResumeLayout(false);
 
         }

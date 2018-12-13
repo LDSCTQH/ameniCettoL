@@ -37,19 +37,17 @@
             this.tp_statistic = new System.Windows.Forms.TabPage();
             this.dgv_statistic = new System.Windows.Forms.DataGridView();
             this.gb_statistic = new System.Windows.Forms.GroupBox();
+            this.btn_statistic = new System.Windows.Forms.Button();
+            this.dtpk_dateTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpk_dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.tb_dateTo = new System.Windows.Forms.TextBox();
+            this.tb_dateFrom = new System.Windows.Forms.TextBox();
             this.lb_endday = new System.Windows.Forms.Label();
             this.lb_startday = new System.Windows.Forms.Label();
             this.lb_film = new System.Windows.Forms.Label();
-            this.lb_cinema = new System.Windows.Forms.Label();
-            this.cb_cinema = new System.Windows.Forms.ComboBox();
             this.cb_film = new System.Windows.Forms.ComboBox();
             this.cinemaDataSet = new LotteCinema.cinemaDataSet();
             this.cinemaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tb_dateFrom = new System.Windows.Forms.TextBox();
-            this.tb_dateTo = new System.Windows.Forms.TextBox();
-            this.dtpk_dateFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtpk_dateTo = new System.Windows.Forms.DateTimePicker();
-            this.btn_statistic = new System.Windows.Forms.Button();
             this.tapControl1.SuspendLayout();
             this.tp_film.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_film)).BeginInit();
@@ -141,8 +139,6 @@
             this.gb_statistic.Controls.Add(this.lb_endday);
             this.gb_statistic.Controls.Add(this.lb_startday);
             this.gb_statistic.Controls.Add(this.lb_film);
-            this.gb_statistic.Controls.Add(this.lb_cinema);
-            this.gb_statistic.Controls.Add(this.cb_cinema);
             this.gb_statistic.Controls.Add(this.cb_film);
             this.gb_statistic.Location = new System.Drawing.Point(15, 65);
             this.gb_statistic.Name = "gb_statistic";
@@ -150,6 +146,48 @@
             this.gb_statistic.TabIndex = 4;
             this.gb_statistic.TabStop = false;
             this.gb_statistic.Text = "Thống kê";
+            // 
+            // btn_statistic
+            // 
+            this.btn_statistic.Location = new System.Drawing.Point(111, 237);
+            this.btn_statistic.Name = "btn_statistic";
+            this.btn_statistic.Size = new System.Drawing.Size(96, 23);
+            this.btn_statistic.TabIndex = 12;
+            this.btn_statistic.Text = "Thống kê";
+            this.btn_statistic.UseVisualStyleBackColor = true;
+            this.btn_statistic.Click += new System.EventHandler(this.btn_statistic_Click);
+            // 
+            // dtpk_dateTo
+            // 
+            this.dtpk_dateTo.Location = new System.Drawing.Point(247, 198);
+            this.dtpk_dateTo.Name = "dtpk_dateTo";
+            this.dtpk_dateTo.Size = new System.Drawing.Size(19, 20);
+            this.dtpk_dateTo.TabIndex = 11;
+            this.dtpk_dateTo.Value = new System.DateTime(2018, 12, 13, 3, 58, 34, 0);
+            this.dtpk_dateTo.ValueChanged += new System.EventHandler(this.dtpk_dateTo_ValueChanged);
+            // 
+            // dtpk_dateFrom
+            // 
+            this.dtpk_dateFrom.Location = new System.Drawing.Point(247, 148);
+            this.dtpk_dateFrom.Name = "dtpk_dateFrom";
+            this.dtpk_dateFrom.Size = new System.Drawing.Size(19, 20);
+            this.dtpk_dateFrom.TabIndex = 10;
+            this.dtpk_dateFrom.Value = new System.DateTime(2018, 12, 13, 3, 58, 34, 0);
+            this.dtpk_dateFrom.ValueChanged += new System.EventHandler(this.dtpk_dateFrom_ValueChanged);
+            // 
+            // tb_dateTo
+            // 
+            this.tb_dateTo.Location = new System.Drawing.Point(145, 198);
+            this.tb_dateTo.Name = "tb_dateTo";
+            this.tb_dateTo.Size = new System.Drawing.Size(100, 20);
+            this.tb_dateTo.TabIndex = 9;
+            // 
+            // tb_dateFrom
+            // 
+            this.tb_dateFrom.Location = new System.Drawing.Point(145, 148);
+            this.tb_dateFrom.Name = "tb_dateFrom";
+            this.tb_dateFrom.Size = new System.Drawing.Size(100, 20);
+            this.tb_dateFrom.TabIndex = 8;
             // 
             // lb_endday
             // 
@@ -178,23 +216,6 @@
             this.lb_film.TabIndex = 5;
             this.lb_film.Text = "Phim";
             // 
-            // lb_cinema
-            // 
-            this.lb_cinema.AutoSize = true;
-            this.lb_cinema.Location = new System.Drawing.Point(40, 51);
-            this.lb_cinema.Name = "lb_cinema";
-            this.lb_cinema.Size = new System.Drawing.Size(27, 13);
-            this.lb_cinema.TabIndex = 4;
-            this.lb_cinema.Text = "Rạp";
-            // 
-            // cb_cinema
-            // 
-            this.cb_cinema.FormattingEnabled = true;
-            this.cb_cinema.Location = new System.Drawing.Point(145, 48);
-            this.cb_cinema.Name = "cb_cinema";
-            this.cb_cinema.Size = new System.Drawing.Size(121, 21);
-            this.cb_cinema.TabIndex = 0;
-            // 
             // cb_film
             // 
             this.cb_film.FormattingEnabled = true;
@@ -212,48 +233,6 @@
             // 
             this.cinemaDataSetBindingSource.DataSource = this.cinemaDataSet;
             this.cinemaDataSetBindingSource.Position = 0;
-            // 
-            // tb_dateFrom
-            // 
-            this.tb_dateFrom.Location = new System.Drawing.Point(145, 148);
-            this.tb_dateFrom.Name = "tb_dateFrom";
-            this.tb_dateFrom.Size = new System.Drawing.Size(100, 20);
-            this.tb_dateFrom.TabIndex = 8;
-            // 
-            // tb_dateTo
-            // 
-            this.tb_dateTo.Location = new System.Drawing.Point(145, 198);
-            this.tb_dateTo.Name = "tb_dateTo";
-            this.tb_dateTo.Size = new System.Drawing.Size(100, 20);
-            this.tb_dateTo.TabIndex = 9;
-            // 
-            // dtpk_dateFrom
-            // 
-            this.dtpk_dateFrom.Location = new System.Drawing.Point(247, 148);
-            this.dtpk_dateFrom.Name = "dtpk_dateFrom";
-            this.dtpk_dateFrom.Size = new System.Drawing.Size(19, 20);
-            this.dtpk_dateFrom.TabIndex = 10;
-            this.dtpk_dateFrom.Value = new System.DateTime(2018, 12, 13, 3, 58, 34, 0);
-            this.dtpk_dateFrom.ValueChanged += new System.EventHandler(this.dtpk_dateFrom_ValueChanged);
-            // 
-            // dtpk_dateTo
-            // 
-            this.dtpk_dateTo.Location = new System.Drawing.Point(247, 198);
-            this.dtpk_dateTo.Name = "dtpk_dateTo";
-            this.dtpk_dateTo.Size = new System.Drawing.Size(19, 20);
-            this.dtpk_dateTo.TabIndex = 11;
-            this.dtpk_dateTo.Value = new System.DateTime(2018, 12, 13, 3, 58, 34, 0);
-            this.dtpk_dateTo.ValueChanged += new System.EventHandler(this.dtpk_dateTo_ValueChanged);
-            // 
-            // btn_statistic
-            // 
-            this.btn_statistic.Location = new System.Drawing.Point(111, 237);
-            this.btn_statistic.Name = "btn_statistic";
-            this.btn_statistic.Size = new System.Drawing.Size(96, 23);
-            this.btn_statistic.TabIndex = 12;
-            this.btn_statistic.Text = "Thống kê";
-            this.btn_statistic.UseVisualStyleBackColor = true;
-            this.btn_statistic.Click += new System.EventHandler(this.btn_statistic_Click);
             // 
             // fManager
             // 
@@ -294,8 +273,6 @@
         private System.Windows.Forms.Label lb_endday;
         private System.Windows.Forms.Label lb_startday;
         private System.Windows.Forms.Label lb_film;
-        private System.Windows.Forms.Label lb_cinema;
-        private System.Windows.Forms.ComboBox cb_cinema;
         private System.Windows.Forms.ComboBox cb_film;
         private System.Windows.Forms.DataGridView dgv_statistic;
         private System.Windows.Forms.DateTimePicker dtpk_dateTo;

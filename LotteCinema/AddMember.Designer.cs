@@ -45,6 +45,7 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtpk_dob = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -91,6 +92,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.dtpk_dob);
             this.panel5.Controls.Add(this.tb_dob);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(166, 139);
@@ -102,7 +104,7 @@
             // 
             this.tb_dob.Location = new System.Drawing.Point(118, 14);
             this.tb_dob.Name = "tb_dob";
-            this.tb_dob.Size = new System.Drawing.Size(301, 20);
+            this.tb_dob.Size = new System.Drawing.Size(277, 20);
             this.tb_dob.TabIndex = 3;
             // 
             // label4
@@ -181,6 +183,7 @@
             this.btn_add.TabIndex = 5;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_cancel
             // 
@@ -203,6 +206,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Điền thông tin thành viên";
             // 
+            // dtpk_dob
+            // 
+            this.dtpk_dob.Location = new System.Drawing.Point(401, 14);
+            this.dtpk_dob.Name = "dtpk_dob";
+            this.dtpk_dob.Size = new System.Drawing.Size(17, 20);
+            this.dtpk_dob.TabIndex = 4;
+            this.dtpk_dob.ValueChanged += new System.EventHandler(this.dtpk_dob_ValueChanged);
+            // 
             // fAddMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +225,7 @@
             this.Name = "fAddMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMember";
+            this.Load += new System.EventHandler(this.fAddMember_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -248,5 +260,6 @@
         private System.Windows.Forms.TextBox tb_phoneNumber;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.DateTimePicker dtpk_dob;
     }
 }
