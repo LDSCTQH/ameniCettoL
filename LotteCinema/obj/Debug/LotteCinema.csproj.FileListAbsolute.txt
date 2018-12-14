@@ -37,4 +37,9 @@ E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\
 E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.csproj.CoreCompileInputs.cache
 E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.exe
 E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.pdb
-E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fSeat.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.fBuyBooking.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.GetTicket.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.AddFilm.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.insertLichChieu.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.UpdateFilm.resources
+E:\Year3\Term1\DatabaseManagementSystem\LotteCinema\ameniCettoL\LotteCinema\obj\Debug\LotteCinema.UpdateLichChieu.resources

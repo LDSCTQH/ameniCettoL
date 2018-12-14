@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFilm.designer.cs">
+      <DependentUpon>AddFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMember.Designer.cs">
+    <Compile Include="AddMember.designer.cs">
       <DependentUpon>AddMember.cs</DependentUpon>
     </Compile>
     <Compile Include="cinemaDataSet.Designer.cs">
@@ -58,6 +64,18 @@
       <DependentUpon>cinemaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="connection.cs" />
+    <Compile Include="GetTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetTicket.designer.cs">
+      <DependentUpon>GetTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertLichChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertLichChieu.designer.cs">
+      <DependentUpon>insertLichChieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +85,7 @@
     <Compile Include="Manager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manager.Designer.cs">
+    <Compile Include="Manager.designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -84,8 +102,29 @@
     <Compile Include="TicketClerk.Designer.cs">
       <DependentUpon>TicketClerk.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFilm.designer.cs">
+      <DependentUpon>UpdateFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLichChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLichChieu.designer.cs">
+      <DependentUpon>UpdateLichChieu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddFilm.resx">
+      <DependentUpon>AddFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddMember.resx">
       <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetTicket.resx">
+      <DependentUpon>GetTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertLichChieu.resx">
+      <DependentUpon>insertLichChieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -107,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketClerk.resx">
       <DependentUpon>TicketClerk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateFilm.resx">
+      <DependentUpon>UpdateFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateLichChieu.resx">
+      <DependentUpon>UpdateLichChieu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="cinemaDataSet.xsc">
       <DependentUpon>cinemaDataSet.xsd</DependentUpon>

@@ -13,6 +13,9 @@ namespace LotteCinema
 {
     public partial class fAddMember : Form
     {
+        public delegate void DoEvent(string cmnd, string sdt, string tenthanhvien, DateTime ngaysinh);
+        public event DoEvent RefreshDgv;
+
         public fAddMember()
         {
             InitializeComponent();
@@ -30,6 +33,7 @@ namespace LotteCinema
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            /*
             using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
             using (SqlCommand cmd = new SqlCommand("sp_ThemThanhVien", conn))
             {
@@ -45,8 +49,15 @@ namespace LotteCinema
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
-            }
+            } */
+            //MessageBox.Show(tb_identityCard.Text+ tb_phoneNumber.Text + tb_name.Text + dtpk_dob.Value.ToString());
+            string cmnd = tb_identityCard.Text.ToString();
+            string sdt = tb_phoneNumber.Text.ToString();
+            string ten = tb_name.Text.ToString();
+            DateTime ngaysinh = dtpk_dob.Value.Date;
+            this.RefreshDgv(cmnd,sdt, ten, ngaysinh);
             MessageBox.Show("Thêm thành viên thành công!");
+            this.Close();
         }
 
         private void fAddMember_Load(object sender, EventArgs e)
