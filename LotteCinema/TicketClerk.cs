@@ -177,6 +177,11 @@ namespace LotteCinema
             getTicket.Show();
         }
 
+        private void tp_ticket_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void loadMembers(SqlConnection conn)
         {
             using (SqlCommand cmd = new SqlCommand("SP_LIETKETHANHVIEN", conn))

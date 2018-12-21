@@ -17,9 +17,9 @@ namespace LotteCinema
 
         private void fBuyBooking_Load(object sender, EventArgs e)
         {
-            lb_cinema.Text = "Rạp: " + fLogin.cinemaID;
-            lb_room.Text = "Phòng: " + roomID;
-            lb_film.Text = "Phim: " + filmID;
+            lb_cinema.Text = "ID Rạp: " + fLogin.cinemaID;
+            lb_room.Text = "ID Phòng: " + roomID;
+            lb_film.Text = "ID Phim: " + filmID;
             loadSeat();
         }
 
@@ -40,7 +40,10 @@ namespace LotteCinema
                     cmd.Parameters.Add("@loaive", SqlDbType.NVarChar);
 
                     cmd.Parameters["@ve"].Value = int.Parse(dgv_seat.Rows[index].Cells[1].Value.ToString());
-                    cmd.Parameters["@thanhvien"].Value = tb_identity.Text;
+                    if (tb_identity == null || string.IsNullOrWhiteSpace(tb_identity.Text))
+                        cmd.Parameters["@thanhvien"].Value = DBNull.Value;
+                    else
+                        cmd.Parameters["@thanhvien"].Value = tb_identity.Text;
                     cmd.Parameters["@nhanvienbanhang"].Value = fLogin.employeeID;
 
                     if (rb_monday.Checked)
@@ -62,12 +65,12 @@ namespace LotteCinema
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    MessageBox.Show("Xong chưa?");
+                    MessageBox.Show("Mua vé thành công");
                 }
             }
             else
             {
-                MessageBox.Show("Khong the mua duoc");
+                MessageBox.Show("Không thể mua được");
             }
         }
 
@@ -78,6 +81,11 @@ namespace LotteCinema
             String veTrong = dgv_seat.Rows[index].Cells[5].Value.ToString();
             if (veTrong.Equals("Trống"))
             {
+                if (tb_identity.Text == null || string.IsNullOrWhiteSpace(tb_identity.Text))
+                {
+                    MessageBox.Show("Hãy nhập cmnd");
+                    return;
+                }
                 using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
                 using (SqlCommand cmd = new SqlCommand("sp_DatCho", conn))
                 {
@@ -89,11 +97,12 @@ namespace LotteCinema
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                    MessageBox.Show("Đặt vé thành công");
                 }
             }
             else
             {
-                MessageBox.Show("Khong the dat duoc");
+                MessageBox.Show("Không thể đặt được");
             }
         }
         

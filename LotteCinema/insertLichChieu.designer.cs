@@ -57,14 +57,15 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.groupBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.groupBox1.Location = new System.Drawing.Point(31, 37);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(507, 224);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.UseWaitCursor = true;
             // 
             // cbThoiGianBatDau
             // 
@@ -78,10 +79,10 @@
             "19:00:00",
             "21:00:00"});
             this.cbThoiGianBatDau.Location = new System.Drawing.Point(135, 136);
-            this.cbThoiGianBatDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbThoiGianBatDau.Margin = new System.Windows.Forms.Padding(2);
             this.cbThoiGianBatDau.Name = "cbThoiGianBatDau";
             this.cbThoiGianBatDau.Size = new System.Drawing.Size(125, 21);
-            this.cbThoiGianBatDau.TabIndex = 13;
+            this.cbThoiGianBatDau.TabIndex = 5;
             this.cbThoiGianBatDau.UseWaitCursor = true;
             // 
             // dtpk_dateInsertLichChieu
@@ -99,37 +100,37 @@
             this.tb_dateFrom.Location = new System.Drawing.Point(135, 85);
             this.tb_dateFrom.Name = "tb_dateFrom";
             this.tb_dateFrom.Size = new System.Drawing.Size(101, 20);
-            this.tb_dateFrom.TabIndex = 11;
+            this.tb_dateFrom.TabIndex = 3;
             this.tb_dateFrom.UseWaitCursor = true;
             // 
             // cbdinhdang
             // 
             this.cbdinhdang.FormattingEnabled = true;
             this.cbdinhdang.Location = new System.Drawing.Point(358, 82);
-            this.cbdinhdang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbdinhdang.Margin = new System.Windows.Forms.Padding(2);
             this.cbdinhdang.Name = "cbdinhdang";
             this.cbdinhdang.Size = new System.Drawing.Size(124, 21);
-            this.cbdinhdang.TabIndex = 9;
+            this.cbdinhdang.TabIndex = 4;
             this.cbdinhdang.UseWaitCursor = true;
             // 
             // cbphim
             // 
             this.cbphim.FormattingEnabled = true;
             this.cbphim.Location = new System.Drawing.Point(358, 37);
-            this.cbphim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbphim.Margin = new System.Windows.Forms.Padding(2);
             this.cbphim.Name = "cbphim";
             this.cbphim.Size = new System.Drawing.Size(124, 21);
-            this.cbphim.TabIndex = 8;
+            this.cbphim.TabIndex = 2;
             this.cbphim.UseWaitCursor = true;
             // 
             // cbphong
             // 
             this.cbphong.FormattingEnabled = true;
             this.cbphong.Location = new System.Drawing.Point(136, 39);
-            this.cbphong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbphong.Margin = new System.Windows.Forms.Padding(2);
             this.cbphong.Name = "cbphong";
             this.cbphong.Size = new System.Drawing.Size(124, 21);
-            this.cbphong.TabIndex = 6;
+            this.cbphong.TabIndex = 1;
             this.cbphong.UseWaitCursor = true;
             // 
             // label5
@@ -189,13 +190,16 @@
             // 
             // btinsert
             // 
+            this.btinsert.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btinsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btinsert.ForeColor = System.Drawing.Color.Red;
             this.btinsert.Location = new System.Drawing.Point(428, 284);
-            this.btinsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btinsert.Margin = new System.Windows.Forms.Padding(2);
             this.btinsert.Name = "btinsert";
             this.btinsert.Size = new System.Drawing.Size(82, 25);
-            this.btinsert.TabIndex = 14;
+            this.btinsert.TabIndex = 6;
             this.btinsert.Text = "Thêm";
-            this.btinsert.UseVisualStyleBackColor = true;
+            this.btinsert.UseVisualStyleBackColor = false;
             this.btinsert.UseWaitCursor = true;
             this.btinsert.Click += new System.EventHandler(this.btinsert_Click);
             // 
@@ -206,7 +210,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btinsert);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "insertLichChieu";
             this.Text = "insertLichChieu";
             this.UseWaitCursor = true;

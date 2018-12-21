@@ -298,5 +298,10 @@ namespace LotteCinema
                 cb_film.Enabled = true;
             }
         }
+
+        private void gb_statistic_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.tb_phoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dtpk_dob = new System.Windows.Forms.DateTimePicker();
             this.tb_dob = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpk_dob = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -79,7 +79,7 @@
             this.tb_phoneNumber.Location = new System.Drawing.Point(118, 14);
             this.tb_phoneNumber.Name = "tb_phoneNumber";
             this.tb_phoneNumber.Size = new System.Drawing.Size(301, 20);
-            this.tb_phoneNumber.TabIndex = 3;
+            this.tb_phoneNumber.TabIndex = 4;
             // 
             // label5
             // 
@@ -99,6 +99,14 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(437, 50);
             this.panel5.TabIndex = 1;
+            // 
+            // dtpk_dob
+            // 
+            this.dtpk_dob.Location = new System.Drawing.Point(401, 14);
+            this.dtpk_dob.Name = "dtpk_dob";
+            this.dtpk_dob.Size = new System.Drawing.Size(17, 20);
+            this.dtpk_dob.TabIndex = 4;
+            this.dtpk_dob.ValueChanged += new System.EventHandler(this.dtpk_dob_ValueChanged);
             // 
             // tb_dob
             // 
@@ -177,20 +185,25 @@
             // 
             // btn_add
             // 
+            this.btn_add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.Color.Red;
             this.btn_add.Location = new System.Drawing.Point(313, 21);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 5;
             this.btn_add.Text = "Thêm";
-            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_cancel
             // 
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.Red;
             this.btn_cancel.Location = new System.Drawing.Point(47, 21);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel.TabIndex = 4;
+            this.btn_cancel.TabIndex = 6;
             this.btn_cancel.Text = "Hủy";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -205,14 +218,6 @@
             this.label1.Size = new System.Drawing.Size(338, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Điền thông tin thành viên";
-            // 
-            // dtpk_dob
-            // 
-            this.dtpk_dob.Location = new System.Drawing.Point(401, 14);
-            this.dtpk_dob.Name = "dtpk_dob";
-            this.dtpk_dob.Size = new System.Drawing.Size(17, 20);
-            this.dtpk_dob.TabIndex = 4;
-            this.dtpk_dob.ValueChanged += new System.EventHandler(this.dtpk_dob_ValueChanged);
             // 
             // fAddMember
             // 

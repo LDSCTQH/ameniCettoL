@@ -312,19 +312,18 @@ insert into Ve(idve, idloaive, suat, ghe, uudai, nhanvienbanhang, trangthai, gia
 SET IDENTITY_INSERT Ve OFF
 go
 
-update NhanVien set matkhau = '1' where cmnd = '274861369'
-go
-insert into Ve(idloaive, suat, ghe, uudai, nhanvienbanhang, trangthai, gia, thanhvien, thoigiandat) values
-(null, 11, 10, null, 1, N'Trống', null,null,null),
-(null, 11, 11, null, 1, N'Trống', null,null,null),
-(null, 11, 12, null, 1, N'Trống', null,null,null),
-(null, 11, 13, null, 1, N'Trống', null,null,null)
-go
-insert into SuatChieu(idphong, ngay, thoigianbd, idphim, iddinhdang)
-values (1,'2018-12-14','12:10:05',1,'2D')
 go
 select * from SuatChieu
-insert into NhanVien (cmnd,idchucvu,matkhau, thuocrap) values
-('1','NV','1', 1)
-go
 select * from ve
+select * from NhanVien
+go
+insert into NhanVien (cmnd,idchucvu,matkhau, thuocrap) values
+('1','NV','1', 1),
+('2', 'QL', '2', 1)
+go
+exec sp_ThemSuatChieu 1,'2018-12-22','12:10:05',1,'2D'
+go
+
+update Ve
+set trangthai = N'Đã đặt', nhanvienbanhang = 1
+where suat = 12 and ghe>=10 and ghe <=20

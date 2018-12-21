@@ -47,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_seat = new System.Windows.Forms.DataGridView();
             this.tb_price = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBoxUuDai.SuspendLayout();
@@ -66,22 +65,28 @@
             // 
             // btn_book
             // 
+            this.btn_book.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_book.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_book.ForeColor = System.Drawing.Color.Red;
             this.btn_book.Location = new System.Drawing.Point(125, 13);
             this.btn_book.Name = "btn_book";
             this.btn_book.Size = new System.Drawing.Size(75, 23);
             this.btn_book.TabIndex = 1;
             this.btn_book.Text = "Đặt vé";
-            this.btn_book.UseVisualStyleBackColor = true;
+            this.btn_book.UseVisualStyleBackColor = false;
             this.btn_book.Click += new System.EventHandler(this.btn_book_Click);
             // 
             // btn_buy
             // 
+            this.btn_buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buy.ForeColor = System.Drawing.Color.Red;
             this.btn_buy.Location = new System.Drawing.Point(16, 13);
             this.btn_buy.Name = "btn_buy";
             this.btn_buy.Size = new System.Drawing.Size(75, 23);
             this.btn_buy.TabIndex = 0;
             this.btn_buy.Text = "Mua vé";
-            this.btn_buy.UseVisualStyleBackColor = true;
+            this.btn_buy.UseVisualStyleBackColor = false;
             this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
             // 
             // lb_cinema
@@ -89,27 +94,27 @@
             this.lb_cinema.AutoSize = true;
             this.lb_cinema.Location = new System.Drawing.Point(32, 23);
             this.lb_cinema.Name = "lb_cinema";
-            this.lb_cinema.Size = new System.Drawing.Size(30, 13);
+            this.lb_cinema.Size = new System.Drawing.Size(44, 13);
             this.lb_cinema.TabIndex = 1;
-            this.lb_cinema.Text = "Rạp:";
+            this.lb_cinema.Text = "ID Rạp:";
             // 
             // lb_room
             // 
             this.lb_room.AutoSize = true;
             this.lb_room.Location = new System.Drawing.Point(151, 23);
             this.lb_room.Name = "lb_room";
-            this.lb_room.Size = new System.Drawing.Size(41, 13);
+            this.lb_room.Size = new System.Drawing.Size(55, 13);
             this.lb_room.TabIndex = 2;
-            this.lb_room.Text = "Phòng:";
+            this.lb_room.Text = "ID Phòng:";
             // 
             // lb_film
             // 
             this.lb_film.AutoSize = true;
             this.lb_film.Location = new System.Drawing.Point(298, 23);
             this.lb_film.Name = "lb_film";
-            this.lb_film.Size = new System.Drawing.Size(33, 13);
+            this.lb_film.Size = new System.Drawing.Size(47, 13);
             this.lb_film.TabIndex = 6;
-            this.lb_film.Text = "Phim:";
+            this.lb_film.Text = "ID Phim:";
             // 
             // tb_identity
             // 
@@ -247,15 +252,6 @@
             this.tb_price.Size = new System.Drawing.Size(155, 20);
             this.tb_price.TabIndex = 12;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "label1";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -271,7 +267,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_price);
             this.Controls.Add(this.dgv_seat);
             this.Controls.Add(this.label3);
@@ -317,7 +312,6 @@
         private System.Windows.Forms.DataGridView dgv_seat;
         private System.Windows.Forms.RadioButton rb_noEndow;
         private System.Windows.Forms.TextBox tb_price;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
 }

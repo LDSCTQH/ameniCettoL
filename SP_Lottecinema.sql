@@ -237,14 +237,14 @@ set tran isolation level repeatable read
 	end catch
 commit tran
 end
-
+/*
 go
 select * from Ve
 go
 declare @boo int
 exec @boo = sp_DatCho 65,null
 print @boo
-go
+go*/
 --exec sp_DatCho 1,'058375038'
 
 --Procedure hủy đăt chỗ, truyền vào id của vé đặt
@@ -568,9 +568,11 @@ set tran isolation level repeatable read
 	end catch
 commit tran
 go
+/*
 exec sp_SuaSuatChieu 16,4,'2018-12-16','13:00:00','3D'
 select * from SuatChieu
 select * from Ve
+*/
 go 
 IF object_id('sp_XoaSuatChieu', 'p') is not null
 	DROP PROC sp_XoaSuatChieu

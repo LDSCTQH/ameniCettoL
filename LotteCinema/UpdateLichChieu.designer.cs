@@ -62,9 +62,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(32, 28);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(544, 271);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -81,7 +81,7 @@
             "19:00:00",
             "21:00:00"});
             this.cbThoiGianBatDau.Location = new System.Drawing.Point(142, 159);
-            this.cbThoiGianBatDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbThoiGianBatDau.Margin = new System.Windows.Forms.Padding(2);
             this.cbThoiGianBatDau.Name = "cbThoiGianBatDau";
             this.cbThoiGianBatDau.Size = new System.Drawing.Size(125, 21);
             this.cbThoiGianBatDau.TabIndex = 17;
@@ -98,7 +98,7 @@
             // 
             this.tbidsuatchieu.Enabled = false;
             this.tbidsuatchieu.Location = new System.Drawing.Point(142, 23);
-            this.tbidsuatchieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbidsuatchieu.Margin = new System.Windows.Forms.Padding(2);
             this.tbidsuatchieu.Name = "tbidsuatchieu";
             this.tbidsuatchieu.Size = new System.Drawing.Size(125, 20);
             this.tbidsuatchieu.TabIndex = 15;
@@ -133,7 +133,7 @@
             // 
             this.cbdinhdang.FormattingEnabled = true;
             this.cbdinhdang.Location = new System.Drawing.Point(364, 110);
-            this.cbdinhdang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbdinhdang.Margin = new System.Windows.Forms.Padding(2);
             this.cbdinhdang.Name = "cbdinhdang";
             this.cbdinhdang.Size = new System.Drawing.Size(124, 21);
             this.cbdinhdang.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             this.cbphong.FormattingEnabled = true;
             this.cbphong.Location = new System.Drawing.Point(142, 67);
-            this.cbphong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbphong.Margin = new System.Windows.Forms.Padding(2);
             this.cbphong.Name = "cbphong";
             this.cbphong.Size = new System.Drawing.Size(124, 21);
             this.cbphong.TabIndex = 6;
@@ -199,13 +199,16 @@
             // 
             // btupdate
             // 
+            this.btupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btupdate.ForeColor = System.Drawing.Color.Red;
             this.btupdate.Location = new System.Drawing.Point(430, 304);
-            this.btupdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btupdate.Margin = new System.Windows.Forms.Padding(2);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(82, 25);
             this.btupdate.TabIndex = 16;
             this.btupdate.Text = "Sửa";
-            this.btupdate.UseVisualStyleBackColor = true;
+            this.btupdate.UseVisualStyleBackColor = false;
             this.btupdate.UseWaitCursor = true;
             this.btupdate.Click += new System.EventHandler(this.btupdate_Click);
             // 
@@ -216,7 +219,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btupdate);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdateLichChieu";
             this.Text = "UpdateLichChieu";
             this.Load += new System.EventHandler(this.UpdateLichChieu_Load);
